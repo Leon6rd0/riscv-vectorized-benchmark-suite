@@ -18,7 +18,7 @@ start:
 serial:
 	@echo "Compiling serial version..."
 	$(RISCV_BIN)/clang -march=rv64gc -O2 -o $(BIN_SERIAL) $(SRC)
-	$(RISCV_BIN)/llvm-objdump --mattr=+m,+f,+d,+a,+c -ds $(BIN_SERIAL) > $(DUMP_SERIAL)
+#	$(RISCV_BIN)/llvm-objdump --mattr=+m,+f,+d,+a,+c -ds $(BIN_SERIAL) > $(DUMP_SERIAL)
 
 vector:
 	@echo "Compiling vector version..."
