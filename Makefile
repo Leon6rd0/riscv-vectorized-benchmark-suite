@@ -1,5 +1,11 @@
 BASE_DIR := $(shell pwd)
 
+# 如果环境变量没设置，则默认使用 /usr
+RISCV ?= /usr
+
+# 将变量导出，使其对所有子 Makefile 可见
+export RISCV
+
 APPLICATION_DIRS := _axpy _blackscholes _canneal _jacobi-2d _lavaMD _matmul _spmv _swaptions _streamcluster _somier _particlefilter _pathfinder 
 
 all: axpy blackscholes canneal jacobi-2d lavaMD matmul spmv swaptions streamcluster somier particlefilter pathfinder
