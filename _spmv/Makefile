@@ -23,7 +23,7 @@ serial:
 vector:
 	@echo "Compiling vector version..."
 	$(RISCV_BIN)/clang -march=rv64gcv -fno-vectorize -DUSE_RISCV_VECTOR -O2 -I../common -o $(BIN_VECTOR) $(SRC)
-	$(RISCV_BIN)/llvm-objdump --mattr=+m,+f,+d,+a,+c,+v -S $(BIN_VECTOR) > $(DUMP_VECTOR)
+#	$(RISCV_BIN)/llvm-objdump --mattr=+m,+f,+d,+a,+c,+v -S $(BIN_VECTOR) > $(DUMP_VECTOR)
 
 clean:
 	rm -f bin/*.dump; \
