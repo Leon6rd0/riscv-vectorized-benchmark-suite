@@ -1,6 +1,6 @@
 
 CC=${RISCV}/bin/clang
-OBJDUMP=${RISCV}/bin/llvm-objdump
+# OBJDUMP=${RISCV}/bin/llvm-objdump
 
 CFLAGS += -march=rv64g -O2 -fno-vectorize
 CFLAGS_VECTOR += -march=rv64gcv -O2 -fno-vectorize
