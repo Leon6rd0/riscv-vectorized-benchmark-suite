@@ -42,10 +42,10 @@ forces_prevec_lmul1.o: intrinsics/forces_prevec_lmul1.c utils.h
 	$(CC) $(CFLAGS_VECTOR) -DUSE_RISCV_VECTOR $(IFLAGS) -c -o $@ $<
 
 bin/somier_serial.dump:
-	${OBJDUMP} --mattr=+m,+f,+d,+a,+c -ds  bin/somier_serial.exe > bin/somier_serial.dump
+#	${OBJDUMP} --mattr=+m,+f,+d,+a,+c -ds  bin/somier_serial.exe > bin/somier_serial.dump
 
 bin/somier_vector.dump:
-	${OBJDUMP} --mattr=+m,+f,+d,+a,+c,+v -ds  bin/somier_vector.exe > bin/somier_vector.dump
+#	${OBJDUMP} --mattr=+m,+f,+d,+a,+c,+v -ds  bin/somier_vector.exe > bin/somier_vector.dump
 
 clean_o:
 	rm -f *.o
