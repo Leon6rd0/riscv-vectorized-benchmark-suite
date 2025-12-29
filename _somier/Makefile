@@ -5,7 +5,7 @@ CC=${RISCV}/bin/clang
 CFLAGS += -march=rv64g -O2 -fno-vectorize
 CFLAGS_VECTOR += -march=rv64gcv -O2 -fno-vectorize
 
-LDFLAGS = -lm -static
+LDFLAGS = -lm 
 IFLAGS = -I ./ -I ${VEHAVE_TOOLCHAIN}/include/vehave/ -I ${VEHAVE_TOOLCHAIN}/include/vehave-user/
 
 start:
